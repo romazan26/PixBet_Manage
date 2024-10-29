@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct PlayerInfoView: View {
+    @StateObject var vm: HomeViewModel
     
     var image: Image = Image(systemName: "person.circle.fill")
     var name: String = "User name"
-    var surname: String = ""
     var position: String = "Position"
     var age: String = "-"
     var experience: String = "-"
@@ -31,17 +31,21 @@ struct PlayerInfoView: View {
                 Spacer()
                 
                 //MARK: Edite button
+                NavigationLink {
+                    AddInfoUserView(vm: vm)
+                } label: {
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                         .foregroundStyle(.white.opacity(0.5))
+                }
+
+                   
             }
             
             //MARK: - Name
-            HStack {
                 Text(name)
-                Text(surname)
-            }
+
             .font(.system(size: 28, weight: .bold))
             .foregroundStyle(.white)
             
@@ -107,6 +111,6 @@ struct PlayerInfoView: View {
 #Preview {
     ZStack {
         Color.main
-        PlayerInfoView()
+        PlayerInfoView(vm: HomeViewModel())
     }
 }

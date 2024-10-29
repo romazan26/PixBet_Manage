@@ -34,9 +34,12 @@ struct IntroView: View {
             .indexViewStyle(.page(backgroundDisplayMode: .interactive))
             
             VStack{
-                Text(pages[pageIndex].text)
-                    .foregroundStyle(.white)
-                    .font(.system(size: 34, weight: .bold))
+                if pageIndex < pages.count{
+                    Text(pages[pageIndex].text)
+                        .foregroundStyle(.white)
+                        .font(.system(size: 34, weight: .bold))
+                }
+                
                 HStack{
                     ForEach(0..<pages.count) { page in
                         if pageIndex == page{

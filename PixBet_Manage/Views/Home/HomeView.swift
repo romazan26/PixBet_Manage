@@ -16,7 +16,7 @@ struct HomeView: View {
                 BackgroundMain()
                 VStack {
                     //MARK: - Player
-                    PlayerInfoView()
+                    PlayerInfoView(vm: vmHome)
                     
                     //MARK: - Swith view
                     HStack {
