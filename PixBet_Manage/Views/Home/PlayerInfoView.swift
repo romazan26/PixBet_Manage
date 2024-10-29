@@ -9,25 +9,32 @@ import SwiftUI
 
 struct PlayerInfoView: View {
     @StateObject var vm: HomeViewModel
-    
-    var image: Image = Image(systemName: "person.circle.fill")
-    var name: String = "User name"
-    var position: String = "Position"
-    var age: String = "-"
-    var experience: String = "-"
-    
     var body: some View {
         VStack {
-           //MARK: - Image
+            //MARK: - Image
             HStack(alignment: .top) {
                 Spacer()
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 130, height: 130)
-                    .cornerRadius(100)
-                    .padding()
-                    .offset(x: 25)
+                if let dataImage = vm.user?.photo{
+                    if let image = Image(data: dataImage) {
+                        image
+                            .resizable()
+                            .frame(width: 130, height: 130)
+                            .clipShape(Circle())
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .offset(x: 25)
+                    }
+                }else {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 130, height: 130)
+                        .cornerRadius(100)
+                        .padding()
+                        .offset(x: 25)
+                }
+                
+                
                 Spacer()
                 
                 //MARK: Edite button
@@ -39,18 +46,18 @@ struct PlayerInfoView: View {
                         .frame(width: 50, height: 50)
                         .foregroundStyle(.white.opacity(0.5))
                 }
-
-                   
+                
+                
             }
             
             //MARK: - Name
-                Text(name)
-
-            .font(.system(size: 28, weight: .bold))
-            .foregroundStyle(.white)
+            Text(vm.user?.name ?? "User name")
+            
+                .font(.system(size: 28, weight: .bold))
+                .foregroundStyle(.white)
             
             //MARK: - Position
-            Text(position)
+            Text(vm.user?.position ?? "Position")
                 .foregroundStyle(.gray)
             
             HStack {
@@ -68,9 +75,9 @@ struct PlayerInfoView: View {
                             .frame(width: 20, height: 20)
                             .foregroundStyle(.gray)
                     }
-                        Text(age)
-                            .foregroundStyle(.greenApp)
-                            .font(.system(size: 28))
+                    Text("\(vm.user?.age ?? 0)")
+                        .foregroundStyle(.greenApp)
+                        .font(.system(size: 28))
                     
                     
                 }
@@ -91,9 +98,9 @@ struct PlayerInfoView: View {
                             .frame(width: 20, height: 20)
                             .foregroundStyle(.gray)
                     }
-                    Text(experience)
-                            .foregroundStyle(.greenApp)
-                            .font(.system(size: 28))
+                    Text("\(vm.user?.experience ?? 0)")
+                        .foregroundStyle(.greenApp)
+                        .font(.system(size: 28))
                     
                     
                 }

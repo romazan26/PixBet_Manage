@@ -10,6 +10,7 @@ import SwiftUI
 struct AddInfoUserView: View {
     @StateObject var vm: HomeViewModel
     @Environment(\.dismiss) var dismiss
+    @FocusState var keyboardFocus: Bool
     var body: some View {
         ZStack {
             //MARK: - Background
@@ -17,12 +18,16 @@ struct AddInfoUserView: View {
             VStack {
                 //MARK: - Image user
                 if let selectedImage = vm.selectedImage {
+                    Button {
+                        vm.showImagePicker = true
+                    } label: {
                     Image(uiImage: selectedImage)
                         .resizable()
                         .frame(width: 130, height: 130)
                         .clipShape(Circle())
                         .aspectRatio(contentMode: .fit)
                         .padding()
+                    }
                 } else {
                     Button {
                         vm.showImagePicker = true
@@ -44,6 +49,7 @@ struct AddInfoUserView: View {
                     TextField("Enter your name", text: $vm.name)
                         .foregroundStyle(.white)
                         .padding()
+                        .focused($keyboardFocus)
                         .background {
                             Color.white.opacity(0.05).cornerRadius(15)
                         }
@@ -55,6 +61,7 @@ struct AddInfoUserView: View {
                         .foregroundStyle(.gray)
                     TextField("Enter your position", text: $vm.position)
                         .foregroundStyle(.white)
+                        .focused($keyboardFocus)
                         .padding()
                         .background {
                             Color.white.opacity(0.05).cornerRadius(15)
@@ -68,6 +75,7 @@ struct AddInfoUserView: View {
                         TextField("Enter your age", text: $vm.age)
                             .keyboardType(.numberPad)
                             .foregroundStyle(.white)
+                            .focused($keyboardFocus)
                             .padding()
                             .background {
                                 Color.white.opacity(0.05).cornerRadius(15)
@@ -81,6 +89,7 @@ struct AddInfoUserView: View {
                         TextField("Enter your experience (years)", text: $vm.experience)
                             .keyboardType(.numberPad)
                             .foregroundStyle(.white)
+                            .focused($keyboardFocus)
                             .padding()
                             .background {
                                 Color.white.opacity(0.05).cornerRadius(15)
@@ -91,13 +100,17 @@ struct AddInfoUserView: View {
                 Spacer()
                 
                 //MARK: - Save button
-                Button {
-                    if let ageInt = Int(vm.age), let experienceInt = Int(vm.experience) {
+                if let ageInt = Int(vm.age), let experienceInt = Int(vm.experience) {
+                    Button {
+                        
                         vm.updateUser(name: vm.name, photo: vm.selectedImage, position: vm.position, age: ageInt, experience: experienceInt)
                         dismiss()
+                        
+                    } label: {
+                        CustomButtonView(text: "Save")
                     }
-                } label: {
-                    CustomButtonView(text: "Save")
+                }else {
+                    CustomButtonView(text: "Save").opacity(0.5)
                 }
             }
             .colorScheme(.dark)
@@ -116,6 +129,9 @@ struct AddInfoUserView: View {
             .sheet(isPresented: $vm.showImagePicker) {
                 ImagePicker(image: $vm.selectedImage)
             }
+        }
+        .onTapGesture {
+            keyboardFocus = false
         }
     }
 }
