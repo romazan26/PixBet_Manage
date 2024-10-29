@@ -18,7 +18,7 @@ struct CustomSwitchButtonView: View {
             Button {
                 isOn = true
             } label: {
-                CustomButtonView(text: nameFirst, color: isOn ? .greenApp : .second)
+                CustomButtonView(text: nameFirst, color: isOn ? .greenApp : .second, height: 28)
             }
             
             Spacer()
@@ -27,7 +27,7 @@ struct CustomSwitchButtonView: View {
             Button {
                 isOn = false
             } label: {
-                CustomButtonView(text: nameFirst, color: !isOn ? .greenApp : .second)
+                CustomButtonView(text: nameFirst, color: !isOn ? .greenApp : .second, height: 28)
             }
         }
     }
