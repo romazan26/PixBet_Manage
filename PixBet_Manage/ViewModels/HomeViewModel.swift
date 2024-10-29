@@ -16,6 +16,7 @@ struct User: Codable {
 
 final class HomeViewModel: ObservableObject {
     @Published var isOn: Bool = false
+    @Published var isPresentSetting: Bool = false
     
     @Published var name: String = ""
     @Published var position: String = ""

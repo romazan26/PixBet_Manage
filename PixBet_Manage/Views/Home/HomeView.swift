@@ -18,7 +18,7 @@ struct HomeView: View {
                     //MARK: - Player
                     PlayerInfoView(vm: vmHome)
                     
-                    //MARK: - Swith view
+                    //MARK: - List or Settings view
                     HStack {
                         //MARK: List button
                         NavigationLink {
@@ -30,8 +30,8 @@ struct HomeView: View {
                         Spacer()
                         
                         //MARK: Settings button
-                        NavigationLink {
-                            ///
+                        Button {
+                            vmHome.isPresentSetting = true
                         } label: {
                             CustomButtonView(text: "Settings", color: .second)
                         }
@@ -58,6 +58,11 @@ struct HomeView: View {
                     
                     Spacer()
                 }.padding()
+                
+                if vmHome.isPresentSetting {
+                    SettingsView(isPresent: $vmHome.isPresentSetting)
+                        .ignoresSafeArea()
+                }
             }
         }
     }
