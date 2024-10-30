@@ -22,7 +22,7 @@ struct HomeView: View {
                     HStack {
                         //MARK: List button
                         NavigationLink {
-                            ///
+                            ListView()
                         } label: {
                             CustomButtonView(text: "List of groups")
                         }

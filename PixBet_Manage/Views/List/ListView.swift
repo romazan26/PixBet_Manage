@@ -12,7 +12,7 @@ struct ListView: View {
     var body: some View {
         ZStack {
             Color.main.ignoresSafeArea()
-            VStack {
+            VStack(spacing: 10){
                 //MARK: - Title view
                 HStack {
                     Text("List")
@@ -28,9 +28,9 @@ struct ListView: View {
                 
                 //MARK: - Choose view
                 if vm.isChooseView {
-                    ListAthletesView()
+                    ListAthletesView(vm: vm)
                 } else {
-                    ListGroupsView()
+                    ListGroupsView(vm: vm)
                 }
                 Spacer()
                 

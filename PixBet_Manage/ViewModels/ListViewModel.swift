@@ -11,9 +11,11 @@ import UIKit
 
 final class ListViewModel: ObservableObject {
     let manager = CoreDataManager.instance
+    
     @Published var isChooseView: Bool = true
     @Published var showImagePicker = false
     
+    //MARK: - Authlete Propertyes
     @Published var atheletes: [Athlet] = []
     
     @Published var simpleName: String = ""
@@ -23,6 +25,9 @@ final class ListViewModel: ObservableObject {
     @Published var simpleWeight: String = ""
     @Published var description: String = ""
     @Published var simpleImage: UIImage?
+    
+    //MARK: - Groups propertyes
+    @Published var groups: [Group] = []
     
     init(){
         getAtheletes()
@@ -39,6 +44,14 @@ final class ListViewModel: ObservableObject {
         newAtheletes.weight = Int16(simpleWeight) ?? 0
         guard let image = simpleImage else { return }
         newAtheletes.foto = image
+        saveAtheletes()
+        clearAtheletes()
+    }
+    
+    //MARK: - Delete data
+    func deleteAtheletes(athlete: Athlet) {
+        manager.context.delete(athlete)
+        saveAtheletes()
     }
     
     //MARK: - Get data
@@ -58,4 +71,14 @@ final class ListViewModel: ObservableObject {
         getAtheletes()
     }
     
+    //MARK: - Clear data
+    func clearAtheletes() {
+        simpleName = ""
+        simpleGender = false
+        simpleAge = ""
+        simpleHeight = ""
+        simpleWeight = ""
+        description = ""
+        simpleImage = nil
+    }
 }
