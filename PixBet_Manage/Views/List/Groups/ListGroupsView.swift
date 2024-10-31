@@ -22,9 +22,12 @@ struct ListGroupsView: View {
                     ScrollView{
                         ForEach(vm.groups) { group in
                             NavigationLink {
-                              ///  AthleteView(vm: vm, athlete: athlete)
+                                GroupView(vm: vm, group: group).onAppear {
+                                    print("Appear")
+                                    vm.getAtheletesListForGroup(group: group)
+                                }
                             } label: {
-                               /// AthleteCellView(athlete: athlete)
+                                GroupCellView(group: group)
                             }
                         }
                     }
@@ -34,7 +37,7 @@ struct ListGroupsView: View {
             
             //MARK: - ADD button
             NavigationLink {
-                AddGroupView()
+                AddGroupView(vm: vm)
             } label: {
                 Image(systemName: "plus.circle.fill")
                     .resizable()

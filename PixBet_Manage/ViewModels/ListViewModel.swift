@@ -28,9 +28,42 @@ final class ListViewModel: ObservableObject {
     
     //MARK: - Groups propertyes
     @Published var groups: [Group] = []
+    @Published var simpleAtheletesGroup: [Athlet] = []
+    
+    @Published var simpleTitleGroup: String = ""
+    @Published var simpleDescriptionGroup: String = ""
     
     init(){
         getAtheletes()
+        getGroup()
+    }
+    
+    
+    //MARK: - Feel data
+    func getAtheletesListForGroup(group: Group){
+        simpleAtheletesGroup.removeAll()
+        for athelete in atheletes{
+            if athelete.group == group{
+                simpleAtheletesGroup.append(athelete)
+            }
+        }
+    }
+    
+    //MARK: Add elemen of simpleAtheletesGroup
+    func addOrDeleteAthelesOfgroup(addAthlete: Athlet){
+        if simpleAtheletesGroup.contains(addAthlete){
+            let removeAtheletes = simpleAtheletesGroup.firstIndex(of: addAthlete)
+            simpleAtheletesGroup.remove(at: removeAtheletes!)
+        }else{
+            simpleAtheletesGroup.append(addAthlete)
+        }
+    }
+    func getCheakMark(athlete: Athlet) -> Bool{
+        if simpleAtheletesGroup.contains(athlete){
+            return true
+        }else {
+            return false
+        }
     }
     
     //MARK: - Add data
@@ -48,10 +81,27 @@ final class ListViewModel: ObservableObject {
         clearAtheletes()
     }
     
+    func addGroup() {
+        let newGroup = Group(context: manager.context)
+        newGroup.title = simpleTitleGroup
+        newGroup.descript = simpleDescriptionGroup
+        for simpleAtheletes in simpleAtheletesGroup{
+            simpleAtheletes.group = newGroup
+            saveAtheletes()
+        }
+        saveGroups()
+        clearGroup()
+    }
+    
     //MARK: - Delete data
     func deleteAtheletes(athlete: Athlet) {
         manager.context.delete(athlete)
         saveAtheletes()
+    }
+    
+    func deleteGroup(group: Group) {
+        manager.context.delete(group)
+        saveGroups()
     }
     
     //MARK: - Get data
@@ -64,11 +114,25 @@ final class ListViewModel: ObservableObject {
         }
     }
     
+    func getGroup() {
+        let request = NSFetchRequest<Group>(entityName: "Group")
+        do{
+            groups = try manager.context.fetch(request)
+        }catch let error{
+            print("Error fetching data: \(error)")
+        }
+    }
+    
     //MARK: - Save data
     func saveAtheletes() {
         atheletes.removeAll()
         manager.save()
         getAtheletes()
+    }
+    func saveGroups() {
+        groups.removeAll()
+        manager.save()
+        getGroup()
     }
     
     //MARK: - Clear data
@@ -80,5 +144,10 @@ final class ListViewModel: ObservableObject {
         simpleWeight = ""
         description = ""
         simpleImage = nil
+    }
+    
+    func clearGroup() {
+        simpleTitleGroup = ""
+        simpleDescriptionGroup = ""
     }
 }
