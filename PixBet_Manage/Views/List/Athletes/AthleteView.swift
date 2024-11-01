@@ -79,11 +79,27 @@ struct AthleteView: View {
                 
                 Spacer()
                 
-                //MARK: - Delete button
-                Button {
-                    vm.deleteAtheletes(athlete: athlete)
-                } label: {
-                    CustomButtonView(text: "Delete", color: .second)
+                
+                HStack {
+                    //MARK: - Delete button
+                    Button {
+                        vm.deleteAtheletes(athlete: athlete)
+                    } label: {
+                        CustomButtonView(text: "Delete", color: .second)
+                    }
+                    
+                    //MARK: - Edit button
+                    NavigationLink {
+                        AddListAtheleView(vm: vm)
+                            .onAppear {
+                                vm.getEditedAthlete(athlete: athlete)
+                                vm.isEditAthelete = true
+                                vm.simpleAthelete = athlete
+                            }
+                    } label: {
+                        CustomButtonView(text: "Edit")
+                    }
+
                 }
 
             }

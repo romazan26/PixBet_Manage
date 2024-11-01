@@ -18,6 +18,9 @@ final class ListViewModel: ObservableObject {
     //MARK: - Authlete Propertyes
     @Published var atheletes: [Athlet] = []
     
+    @Published var isEditAthelete: Bool = false
+    @Published var simpleAthelete: Athlet?
+    
     @Published var simpleName: String = ""
     @Published var simpleGender: Bool = false
     @Published var simpleAge: String = ""
@@ -28,8 +31,11 @@ final class ListViewModel: ObservableObject {
     
     //MARK: - Groups propertyes
     @Published var groups: [Group] = []
-    @Published var simpleAtheletesGroup: [Athlet] = []
+    @Published var simpleGroup: Group?
     
+    @Published var isPresentEditGroup: Bool = false
+    @Published var isEditGroup: Bool = false
+    @Published var simpleAtheletesGroup: [Athlet] = []
     @Published var simpleTitleGroup: String = ""
     @Published var simpleDescriptionGroup: String = ""
     
@@ -39,6 +45,33 @@ final class ListViewModel: ObservableObject {
     }
     
     
+    //MARK: - Edit data
+    func changeTheGroupData(){
+        let editGroup = groups.first(where: { $0.id == simpleGroup?.id })
+        editGroup?.title = simpleTitleGroup
+        editGroup?.descript = simpleDescriptionGroup
+        for simpleAtheletes in simpleAtheletesGroup{
+            simpleAtheletes.group = editGroup
+            saveAtheletes()
+        }
+        saveGroups()
+        clearGroup()
+    }
+    
+    func changeTheAtheleteData(){
+        let editAthlete = atheletes.first(where: { $0.id == simpleAthelete?.id })
+        editAthlete?.name = simpleName
+        editAthlete?.gender = simpleGender
+        editAthlete?.age = Int16(simpleAge) ?? 0
+        editAthlete?.height = Int16(simpleHeight) ?? 0
+        editAthlete?.weight = Int16(simpleWeight) ?? 0
+        editAthlete?.descript = description
+        editAthlete?.foto = simpleImage
+        saveAtheletes()
+        clearAtheletes()
+        isEditAthelete = false
+    }
+    
     //MARK: - Feel data
     func getAtheletesListForGroup(group: Group){
         simpleAtheletesGroup.removeAll()
@@ -47,6 +80,25 @@ final class ListViewModel: ObservableObject {
                 simpleAtheletesGroup.append(athelete)
             }
         }
+    }
+    
+    func getEditedGroup(group: Group){
+        simpleTitleGroup = group.title ?? ""
+        simpleDescriptionGroup = group.descript ?? ""
+        if simpleAtheletesGroup.isEmpty{
+            getAtheletesListForGroup(group: group)
+        }
+        
+    }
+    
+    func getEditedAthlete(athlete: Athlet){
+        simpleName = athlete.name ?? ""
+        simpleGender = athlete.gender
+        simpleAge = String(athlete.age)
+        simpleHeight = String(athlete.height)
+        simpleWeight = String(athlete.weight)
+        description = athlete.descript ?? ""
+        simpleImage = athlete.foto
     }
     
     //MARK: Add elemen of simpleAtheletesGroup

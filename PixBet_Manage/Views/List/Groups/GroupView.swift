@@ -55,11 +55,26 @@ struct GroupView: View {
                 }
                 Spacer()
                 
-                //MARK: - Delete button
-                Button {
-                    vm.deleteGroup(group: group)
-                } label: {
-                    CustomButtonView(text: "Delete", color: .second)
+                //MARK: - buttons group
+                HStack {
+                    //MARK: - Delete button
+                    Button {
+                        vm.deleteGroup(group: group)
+                    } label: {
+                        CustomButtonView(text: "Delete", color: .second)
+                    }
+                    
+                    //Edit button
+                    NavigationLink {
+                        AddGroupView(vm: vm).onAppear {
+                            vm.getEditedGroup(group: group)
+                            vm.simpleGroup = group
+                            vm.isEditGroup = true
+                        }
+                    } label: {
+                        CustomButtonView(text: "Edit")
+                    }
+
                 }
 
             }.padding()

@@ -90,8 +90,14 @@ struct AddGroupView: View {
                     
                     Spacer()
                     
+                    //MARK: - Save button
                     Button {
-                        vm.addGroup()
+                        if vm.isEditGroup {
+                            vm.changeTheGroupData()
+                        }else{
+                            vm.addGroup()
+                        }
+                        
                         dismiss()
                     } label: {
                         CustomButtonView(text: "Save")

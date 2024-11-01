@@ -32,6 +32,7 @@ struct ChooseAthleteOfGroupeView: View {
                 
                 //MARK: - Save button
                 Button {
+                    print(vm.simpleAtheletesGroup)
                     dismiss()
                 } label: {
                     CustomButtonView(text: "Save")

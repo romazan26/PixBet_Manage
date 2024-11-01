@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GroupCellView: View {
-    let group: Group
+    @ObservedObject var group: Group
     var body: some View {
         ZStack {
             Color.second.cornerRadius(32)
