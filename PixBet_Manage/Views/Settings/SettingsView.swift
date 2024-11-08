@@ -15,7 +15,7 @@ struct SettingsView: View {
     @State private var isPresentShare = false
     @State private var isPresentPolicy = false
     @State var urlShare = "https://www.apple.com/app-store/"
-    @State var urlPolicy = "https://www.apple.com/app-store/"
+    @State var urlPolicy = "https://www.termsfeed.com/live/5cada2dc-3221-4ce1-925b-ef22c13e1f48"
     
     var body: some View {
         ZStack {
