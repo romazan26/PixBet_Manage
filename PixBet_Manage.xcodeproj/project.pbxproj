@@ -3,20 +3,115 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3082F96C2CDEA949009AC747 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3082F9442CDEA949009AC747 /* Preview Assets.xcassets */; };
+		3082F96D2CDEA949009AC747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3082F9682CDEA949009AC747 /* Assets.xcassets */; };
+		3082F96E2CDEA949009AC747 /* AthleteCellOfGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9292CDEA949009AC747 /* AthleteCellOfGroup.swift */; };
+		3082F96F2CDEA949009AC747 /* AthleteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92A2CDEA949009AC747 /* AthleteCellView.swift */; };
+		3082F9702CDEA949009AC747 /* ChooseAthleteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92B2CDEA949009AC747 /* ChooseAthleteCellView.swift */; };
+		3082F9712CDEA949009AC747 /* ComplexityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92C2CDEA949009AC747 /* ComplexityCellView.swift */; };
+		3082F9722CDEA949009AC747 /* ExerciseCellview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92D2CDEA949009AC747 /* ExerciseCellview.swift */; };
+		3082F9732CDEA949009AC747 /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92E2CDEA949009AC747 /* GroupCellView.swift */; };
+		3082F9742CDEA949009AC747 /* NewExerciseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F92F2CDEA949009AC747 /* NewExerciseCellView.swift */; };
+		3082F9752CDEA949009AC747 /* NoDataEvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9302CDEA949009AC747 /* NoDataEvailableCell.swift */; };
+		3082F9762CDEA949009AC747 /* NoTraininfCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9312CDEA949009AC747 /* NoTraininfCellView.swift */; };
+		3082F9772CDEA949009AC747 /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9322CDEA949009AC747 /* TrainingCellView.swift */; };
+		3082F9782CDEA949009AC747 /* Athlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9342CDEA949009AC747 /* Athlet.swift */; };
+		3082F9792CDEA949009AC747 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9352CDEA949009AC747 /* CoreDataManager.swift */; };
+		3082F97A2CDEA949009AC747 /* PixBet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9362CDEA949009AC747 /* PixBet.xcdatamodeld */; };
+		3082F97B2CDEA949009AC747 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9372CDEA949009AC747 /* UIImageTransformer.swift */; };
+		3082F97C2CDEA949009AC747 /* EnumComplexityTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9392CDEA949009AC747 /* EnumComplexityTraining.swift */; };
+		3082F97D2CDEA949009AC747 /* EnumTrainngType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F93A2CDEA949009AC747 /* EnumTrainngType.swift */; };
+		3082F97E2CDEA949009AC747 /* BackgroundMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F93C2CDEA949009AC747 /* BackgroundMain.swift */; };
+		3082F97F2CDEA949009AC747 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F93D2CDEA949009AC747 /* CustomButtonView.swift */; };
+		3082F9802CDEA949009AC747 /* CustomSwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F93E2CDEA949009AC747 /* CustomSwitchButtonView.swift */; };
+		3082F9812CDEA949009AC747 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F93F2CDEA949009AC747 /* ImagePicker.swift */; };
+		3082F9822CDEA949009AC747 /* MultiLineTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9402CDEA949009AC747 /* MultiLineTF.swift */; };
+		3082F9832CDEA949009AC747 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9412CDEA949009AC747 /* SettingButton.swift */; };
+		3082F9842CDEA949009AC747 /* typeTrainingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9422CDEA949009AC747 /* typeTrainingsListView.swift */; };
+		3082F9852CDEA949009AC747 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9462CDEA949009AC747 /* HomeViewModel.swift */; };
+		3082F9862CDEA949009AC747 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9472CDEA949009AC747 /* ListViewModel.swift */; };
+		3082F9872CDEA949009AC747 /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9482CDEA949009AC747 /* TrainingsViewModel.swift */; };
+		3082F9882CDEA949009AC747 /* AddInfoUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F94A2CDEA949009AC747 /* AddInfoUserView.swift */; };
+		3082F9892CDEA949009AC747 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F94B2CDEA949009AC747 /* HomeView.swift */; };
+		3082F98A2CDEA949009AC747 /* PlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F94C2CDEA949009AC747 /* PlayerInfoView.swift */; };
+		3082F98B2CDEA949009AC747 /* AddListAtheleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F94E2CDEA949009AC747 /* AddListAtheleView.swift */; };
+		3082F98C2CDEA949009AC747 /* AthleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F94F2CDEA949009AC747 /* AthleteView.swift */; };
+		3082F98D2CDEA949009AC747 /* ListAthletesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9502CDEA949009AC747 /* ListAthletesView.swift */; };
+		3082F98E2CDEA949009AC747 /* AddGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9522CDEA949009AC747 /* AddGroupView.swift */; };
+		3082F98F2CDEA949009AC747 /* ChooseAthleteOfGroupeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9532CDEA949009AC747 /* ChooseAthleteOfGroupeView.swift */; };
+		3082F9902CDEA949009AC747 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9542CDEA949009AC747 /* GroupView.swift */; };
+		3082F9912CDEA949009AC747 /* ListGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9552CDEA949009AC747 /* ListGroupsView.swift */; };
+		3082F9922CDEA949009AC747 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9572CDEA949009AC747 /* ListView.swift */; };
+		3082F9932CDEA949009AC747 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9592CDEA949009AC747 /* LoadingView.swift */; };
+		3082F9942CDEA949009AC747 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F95B2CDEA949009AC747 /* IntroView.swift */; };
+		3082F9952CDEA949009AC747 /* PageIntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F95C2CDEA949009AC747 /* PageIntroModel.swift */; };
+		3082F9962CDEA949009AC747 /* PageIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F95D2CDEA949009AC747 /* PageIntroView.swift */; };
+		3082F9972CDEA949009AC747 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F95F2CDEA949009AC747 /* SettingsView.swift */; };
+		3082F9982CDEA949009AC747 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9602CDEA949009AC747 /* webView.swift */; };
+		3082F9992CDEA949009AC747 /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9612CDEA949009AC747 /* WebViewPage.swift */; };
+		3082F99A2CDEA949009AC747 /* AddTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9632CDEA949009AC747 /* AddTrainingView.swift */; };
+		3082F99B2CDEA949009AC747 /* TrainingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9642CDEA949009AC747 /* TrainingsView.swift */; };
+		3082F99C2CDEA949009AC747 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9652CDEA949009AC747 /* TrainingView.swift */; };
+		3082F99D2CDEA949009AC747 /* PixBet_ManageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082F9692CDEA949009AC747 /* PixBet_ManageApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		3082F9292CDEA949009AC747 /* AthleteCellOfGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCellOfGroup.swift; sourceTree = "<group>"; };
+		3082F92A2CDEA949009AC747 /* AthleteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCellView.swift; sourceTree = "<group>"; };
+		3082F92B2CDEA949009AC747 /* ChooseAthleteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAthleteCellView.swift; sourceTree = "<group>"; };
+		3082F92C2CDEA949009AC747 /* ComplexityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityCellView.swift; sourceTree = "<group>"; };
+		3082F92D2CDEA949009AC747 /* ExerciseCellview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCellview.swift; sourceTree = "<group>"; };
+		3082F92E2CDEA949009AC747 /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
+		3082F92F2CDEA949009AC747 /* NewExerciseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseCellView.swift; sourceTree = "<group>"; };
+		3082F9302CDEA949009AC747 /* NoDataEvailableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataEvailableCell.swift; sourceTree = "<group>"; };
+		3082F9312CDEA949009AC747 /* NoTraininfCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTraininfCellView.swift; sourceTree = "<group>"; };
+		3082F9322CDEA949009AC747 /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
+		3082F9342CDEA949009AC747 /* Athlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlet.swift; sourceTree = "<group>"; };
+		3082F9352CDEA949009AC747 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3082F9372CDEA949009AC747 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		3082F9392CDEA949009AC747 /* EnumComplexityTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumComplexityTraining.swift; sourceTree = "<group>"; };
+		3082F93A2CDEA949009AC747 /* EnumTrainngType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTrainngType.swift; sourceTree = "<group>"; };
+		3082F93C2CDEA949009AC747 /* BackgroundMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMain.swift; sourceTree = "<group>"; };
+		3082F93D2CDEA949009AC747 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		3082F93E2CDEA949009AC747 /* CustomSwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchButtonView.swift; sourceTree = "<group>"; };
+		3082F93F2CDEA949009AC747 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3082F9402CDEA949009AC747 /* MultiLineTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineTF.swift; sourceTree = "<group>"; };
+		3082F9412CDEA949009AC747 /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
+		3082F9422CDEA949009AC747 /* typeTrainingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeTrainingsListView.swift; sourceTree = "<group>"; };
+		3082F9442CDEA949009AC747 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3082F9462CDEA949009AC747 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3082F9472CDEA949009AC747 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		3082F9482CDEA949009AC747 /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
+		3082F94A2CDEA949009AC747 /* AddInfoUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoUserView.swift; sourceTree = "<group>"; };
+		3082F94B2CDEA949009AC747 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3082F94C2CDEA949009AC747 /* PlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoView.swift; sourceTree = "<group>"; };
+		3082F94E2CDEA949009AC747 /* AddListAtheleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListAtheleView.swift; sourceTree = "<group>"; };
+		3082F94F2CDEA949009AC747 /* AthleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteView.swift; sourceTree = "<group>"; };
+		3082F9502CDEA949009AC747 /* ListAthletesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAthletesView.swift; sourceTree = "<group>"; };
+		3082F9522CDEA949009AC747 /* AddGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupView.swift; sourceTree = "<group>"; };
+		3082F9532CDEA949009AC747 /* ChooseAthleteOfGroupeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAthleteOfGroupeView.swift; sourceTree = "<group>"; };
+		3082F9542CDEA949009AC747 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		3082F9552CDEA949009AC747 /* ListGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGroupsView.swift; sourceTree = "<group>"; };
+		3082F9572CDEA949009AC747 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3082F9592CDEA949009AC747 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3082F95B2CDEA949009AC747 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		3082F95C2CDEA949009AC747 /* PageIntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntroModel.swift; sourceTree = "<group>"; };
+		3082F95D2CDEA949009AC747 /* PageIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntroView.swift; sourceTree = "<group>"; };
+		3082F95F2CDEA949009AC747 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3082F9602CDEA949009AC747 /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
+		3082F9612CDEA949009AC747 /* WebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
+		3082F9632CDEA949009AC747 /* AddTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingView.swift; sourceTree = "<group>"; };
+		3082F9642CDEA949009AC747 /* TrainingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsView.swift; sourceTree = "<group>"; };
+		3082F9652CDEA949009AC747 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		3082F9682CDEA949009AC747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3082F9692CDEA949009AC747 /* PixBet_ManageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixBet_ManageApp.swift; sourceTree = "<group>"; };
+		3082F96B2CDEA949009AC747 /* PixBet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PixBet.xcdatamodel; sourceTree = "<group>"; };
 		30F0E1E32CCFE860003046EB /* PixBet_Manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixBet_Manage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		30F0E1E52CCFE860003046EB /* PixBet_Manage */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PixBet_Manage;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		30F0E1E02CCFE860003046EB /* Frameworks */ = {
@@ -29,10 +124,187 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3082F9332CDEA949009AC747 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9292CDEA949009AC747 /* AthleteCellOfGroup.swift */,
+				3082F92A2CDEA949009AC747 /* AthleteCellView.swift */,
+				3082F92B2CDEA949009AC747 /* ChooseAthleteCellView.swift */,
+				3082F92C2CDEA949009AC747 /* ComplexityCellView.swift */,
+				3082F92D2CDEA949009AC747 /* ExerciseCellview.swift */,
+				3082F92E2CDEA949009AC747 /* GroupCellView.swift */,
+				3082F92F2CDEA949009AC747 /* NewExerciseCellView.swift */,
+				3082F9302CDEA949009AC747 /* NoDataEvailableCell.swift */,
+				3082F9312CDEA949009AC747 /* NoTraininfCellView.swift */,
+				3082F9322CDEA949009AC747 /* TrainingCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3082F9382CDEA949009AC747 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9342CDEA949009AC747 /* Athlet.swift */,
+				3082F9352CDEA949009AC747 /* CoreDataManager.swift */,
+				3082F9362CDEA949009AC747 /* PixBet.xcdatamodeld */,
+				3082F9372CDEA949009AC747 /* UIImageTransformer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3082F93B2CDEA949009AC747 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9392CDEA949009AC747 /* EnumComplexityTraining.swift */,
+				3082F93A2CDEA949009AC747 /* EnumTrainngType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		3082F9432CDEA949009AC747 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3082F93C2CDEA949009AC747 /* BackgroundMain.swift */,
+				3082F93D2CDEA949009AC747 /* CustomButtonView.swift */,
+				3082F93E2CDEA949009AC747 /* CustomSwitchButtonView.swift */,
+				3082F93F2CDEA949009AC747 /* ImagePicker.swift */,
+				3082F9402CDEA949009AC747 /* MultiLineTF.swift */,
+				3082F9412CDEA949009AC747 /* SettingButton.swift */,
+				3082F9422CDEA949009AC747 /* typeTrainingsListView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3082F9452CDEA949009AC747 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9442CDEA949009AC747 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3082F9492CDEA949009AC747 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9462CDEA949009AC747 /* HomeViewModel.swift */,
+				3082F9472CDEA949009AC747 /* ListViewModel.swift */,
+				3082F9482CDEA949009AC747 /* TrainingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3082F94D2CDEA949009AC747 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3082F94A2CDEA949009AC747 /* AddInfoUserView.swift */,
+				3082F94B2CDEA949009AC747 /* HomeView.swift */,
+				3082F94C2CDEA949009AC747 /* PlayerInfoView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3082F9512CDEA949009AC747 /* Athletes */ = {
+			isa = PBXGroup;
+			children = (
+				3082F94E2CDEA949009AC747 /* AddListAtheleView.swift */,
+				3082F94F2CDEA949009AC747 /* AthleteView.swift */,
+				3082F9502CDEA949009AC747 /* ListAthletesView.swift */,
+			);
+			path = Athletes;
+			sourceTree = "<group>";
+		};
+		3082F9562CDEA949009AC747 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9522CDEA949009AC747 /* AddGroupView.swift */,
+				3082F9532CDEA949009AC747 /* ChooseAthleteOfGroupeView.swift */,
+				3082F9542CDEA949009AC747 /* GroupView.swift */,
+				3082F9552CDEA949009AC747 /* ListGroupsView.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		3082F9582CDEA949009AC747 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9512CDEA949009AC747 /* Athletes */,
+				3082F9562CDEA949009AC747 /* Groups */,
+				3082F9572CDEA949009AC747 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3082F95A2CDEA949009AC747 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9592CDEA949009AC747 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		3082F95E2CDEA949009AC747 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				3082F95B2CDEA949009AC747 /* IntroView.swift */,
+				3082F95C2CDEA949009AC747 /* PageIntroModel.swift */,
+				3082F95D2CDEA949009AC747 /* PageIntroView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		3082F9622CDEA949009AC747 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3082F95F2CDEA949009AC747 /* SettingsView.swift */,
+				3082F9602CDEA949009AC747 /* webView.swift */,
+				3082F9612CDEA949009AC747 /* WebViewPage.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3082F9662CDEA949009AC747 /* Trainings */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9632CDEA949009AC747 /* AddTrainingView.swift */,
+				3082F9642CDEA949009AC747 /* TrainingsView.swift */,
+				3082F9652CDEA949009AC747 /* TrainingView.swift */,
+			);
+			path = Trainings;
+			sourceTree = "<group>";
+		};
+		3082F9672CDEA949009AC747 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3082F94D2CDEA949009AC747 /* Home */,
+				3082F9582CDEA949009AC747 /* List */,
+				3082F95A2CDEA949009AC747 /* Loading */,
+				3082F95E2CDEA949009AC747 /* OnBoarding */,
+				3082F9622CDEA949009AC747 /* Settings */,
+				3082F9662CDEA949009AC747 /* Trainings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3082F96A2CDEA949009AC747 /* PixBet_Manage */ = {
+			isa = PBXGroup;
+			children = (
+				3082F9332CDEA949009AC747 /* Cells */,
+				3082F9382CDEA949009AC747 /* CoreData */,
+				3082F93B2CDEA949009AC747 /* Enums */,
+				3082F9432CDEA949009AC747 /* Helpers */,
+				3082F9452CDEA949009AC747 /* Preview Content */,
+				3082F9492CDEA949009AC747 /* ViewModels */,
+				3082F9672CDEA949009AC747 /* Views */,
+				3082F9682CDEA949009AC747 /* Assets.xcassets */,
+				3082F9692CDEA949009AC747 /* PixBet_ManageApp.swift */,
+			);
+			path = PixBet_Manage;
+			sourceTree = "<group>";
+		};
 		30F0E1DA2CCFE860003046EB = {
 			isa = PBXGroup;
 			children = (
-				30F0E1E52CCFE860003046EB /* PixBet_Manage */,
+				3082F96A2CDEA949009AC747 /* PixBet_Manage */,
 				30F0E1E42CCFE860003046EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,9 +332,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				30F0E1E52CCFE860003046EB /* PixBet_Manage */,
-			);
 			name = PixBet_Manage;
 			packageProductDependencies = (
 			);
@@ -86,6 +355,7 @@
 				};
 			};
 			buildConfigurationList = 30F0E1DE2CCFE860003046EB /* Build configuration list for PBXProject "PixBet_Manage" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -93,8 +363,6 @@
 				Base,
 			);
 			mainGroup = 30F0E1DA2CCFE860003046EB;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 30F0E1E42CCFE860003046EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -109,6 +377,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3082F96C2CDEA949009AC747 /* Preview Assets.xcassets in Resources */,
+				3082F96D2CDEA949009AC747 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +389,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3082F96E2CDEA949009AC747 /* AthleteCellOfGroup.swift in Sources */,
+				3082F96F2CDEA949009AC747 /* AthleteCellView.swift in Sources */,
+				3082F9702CDEA949009AC747 /* ChooseAthleteCellView.swift in Sources */,
+				3082F9712CDEA949009AC747 /* ComplexityCellView.swift in Sources */,
+				3082F9722CDEA949009AC747 /* ExerciseCellview.swift in Sources */,
+				3082F9732CDEA949009AC747 /* GroupCellView.swift in Sources */,
+				3082F9742CDEA949009AC747 /* NewExerciseCellView.swift in Sources */,
+				3082F9752CDEA949009AC747 /* NoDataEvailableCell.swift in Sources */,
+				3082F9762CDEA949009AC747 /* NoTraininfCellView.swift in Sources */,
+				3082F9772CDEA949009AC747 /* TrainingCellView.swift in Sources */,
+				3082F9782CDEA949009AC747 /* Athlet.swift in Sources */,
+				3082F9792CDEA949009AC747 /* CoreDataManager.swift in Sources */,
+				3082F97A2CDEA949009AC747 /* PixBet.xcdatamodeld in Sources */,
+				3082F97B2CDEA949009AC747 /* UIImageTransformer.swift in Sources */,
+				3082F97C2CDEA949009AC747 /* EnumComplexityTraining.swift in Sources */,
+				3082F97D2CDEA949009AC747 /* EnumTrainngType.swift in Sources */,
+				3082F97E2CDEA949009AC747 /* BackgroundMain.swift in Sources */,
+				3082F97F2CDEA949009AC747 /* CustomButtonView.swift in Sources */,
+				3082F9802CDEA949009AC747 /* CustomSwitchButtonView.swift in Sources */,
+				3082F9812CDEA949009AC747 /* ImagePicker.swift in Sources */,
+				3082F9822CDEA949009AC747 /* MultiLineTF.swift in Sources */,
+				3082F9832CDEA949009AC747 /* SettingButton.swift in Sources */,
+				3082F9842CDEA949009AC747 /* typeTrainingsListView.swift in Sources */,
+				3082F9852CDEA949009AC747 /* HomeViewModel.swift in Sources */,
+				3082F9862CDEA949009AC747 /* ListViewModel.swift in Sources */,
+				3082F9872CDEA949009AC747 /* TrainingsViewModel.swift in Sources */,
+				3082F9882CDEA949009AC747 /* AddInfoUserView.swift in Sources */,
+				3082F9892CDEA949009AC747 /* HomeView.swift in Sources */,
+				3082F98A2CDEA949009AC747 /* PlayerInfoView.swift in Sources */,
+				3082F98B2CDEA949009AC747 /* AddListAtheleView.swift in Sources */,
+				3082F98C2CDEA949009AC747 /* AthleteView.swift in Sources */,
+				3082F98D2CDEA949009AC747 /* ListAthletesView.swift in Sources */,
+				3082F98E2CDEA949009AC747 /* AddGroupView.swift in Sources */,
+				3082F98F2CDEA949009AC747 /* ChooseAthleteOfGroupeView.swift in Sources */,
+				3082F9902CDEA949009AC747 /* GroupView.swift in Sources */,
+				3082F9912CDEA949009AC747 /* ListGroupsView.swift in Sources */,
+				3082F9922CDEA949009AC747 /* ListView.swift in Sources */,
+				3082F9932CDEA949009AC747 /* LoadingView.swift in Sources */,
+				3082F9942CDEA949009AC747 /* IntroView.swift in Sources */,
+				3082F9952CDEA949009AC747 /* PageIntroModel.swift in Sources */,
+				3082F9962CDEA949009AC747 /* PageIntroView.swift in Sources */,
+				3082F9972CDEA949009AC747 /* SettingsView.swift in Sources */,
+				3082F9982CDEA949009AC747 /* webView.swift in Sources */,
+				3082F9992CDEA949009AC747 /* WebViewPage.swift in Sources */,
+				3082F99A2CDEA949009AC747 /* AddTrainingView.swift in Sources */,
+				3082F99B2CDEA949009AC747 /* TrainingsView.swift in Sources */,
+				3082F99C2CDEA949009AC747 /* TrainingView.swift in Sources */,
+				3082F99D2CDEA949009AC747 /* PixBet_ManageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +652,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3082F9362CDEA949009AC747 /* PixBet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3082F96B2CDEA949009AC747 /* PixBet.xcdatamodel */,
+			);
+			currentVersion = 3082F96B2CDEA949009AC747 /* PixBet.xcdatamodel */;
+			path = PixBet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30F0E1DB2CCFE860003046EB /* Project object */;
 }
